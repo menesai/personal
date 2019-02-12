@@ -1,0 +1,80 @@
+.container{
+    background-color: rgb(233, 233, 233);
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.signUp{    
+    background-color: white;
+    border-radius: 7px;
+    /* margin-top: 10vh;
+    margin-bottom: 10vh; */
+    margin-left: 10vw;
+    padding: 10%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* margin: 10vh  10vh 10vh 10vh; */
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .1);
+
+}
+
+.ipt1, .ipt2{
+    padding: 15px;
+    font-size: 15px;
+    /* border-radius: 5px; */
+     background-color: #F5F5FA;
+     /* font: inherit; */
+     font: 1rem "PT Sans", sans-serif;
+     outline: none; 
+     border: none;
+     margin: 10px;
+     /* box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .1); */
+}
+
+.btn-login{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #FFDE12;
+    outline: none;
+    font-size: 13px;
+    border-radius: 5px;
+}
+
+.btn-login:hover{
+    background-color: #CEB001;
+    cursor: pointer;
+}
+
+.display-reg{
+     margin-top: 20vh;
+    align-items: center; 
+    margin-left: 14vw;
+    margin-right: 14vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.pjname{
+    text-align: center;
+    margin: 20px;
+}
+
+.btn-reg{
+    margin: 20px;
+    padding: 15px;
+    outline: none;
+    background-color: rgb(233, 233, 233);
+    border: .50px solid #427AA1;
+    border-radius: 5px;
+    font-size: 24px;
+}
+
+.btn-reg:hover{
+    background-color: #427AA1;
+    color: white;
+    cursor: pointer;
+}

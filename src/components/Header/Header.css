@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Kaushan+Script');
+
+
+.nav{
+    background-color: #427AA1;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: center; 
+    /* position: fixed;
+    width: 100%;
+    overflow: hidden;
+    top: 0; */
+}
+
+ul{
+    display: flex;
+    margin-left: 6vw;
+}
+
+.title{
+    margin-right: 3vw;
+    font-family: 'Kaushan Script', cursive;
+    color: rgb(216, 150, 141);
+}
+
+li{
+    margin: 25px;
+    color: white;
+    list-style-type: none;
+    cursor: pointer;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 22px;
+    
+}
+
+.l1, .l2, .l3, .l4{
+    text-decoration: none;
+}
+
+.signup:hover, .create:hover, .home:hover, .register:hover{
+    color: rgb(198, 196, 196);
+}
