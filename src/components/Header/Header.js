@@ -1,22 +1,33 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom';
-import './Header.css'
+// import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
+import {getUser} from '../../ducks/UsersRed';
+import './Header.css';
+import H1 from './H1';
+import H2 from './H2';
 
 class Header extends Component {
 
+  componentDidMount(){
+    this.props.getUser();
+  }
+
+  logOut = () => {
+    this.props.logout()
+    console.log(this.props.logOut)
+  }
+
   render() {
-    return (
-      <div className='nav'>
-      <div className='title'><h1>Title Of Project</h1></div>
-      <ul>
-        <Link className='l1' to='/' ><li className='home'>HOME</li></Link>
-        <Link className='l2' to='/create' ><li className='create'>POST A PROJECT</li></Link>
-        <Link className='l3' to='signup' ><li className='signup'>SIGN IN</li></Link>
-        <Link className='l4' to='/register' ><li className='register'>REGISTER</li></Link>
-      </ul>
-      </div> 
+    return this.props.user.username?(
+        <H1/>
+        ) : (
+          <div>
+            <H2/>
+          </div>
     )
   }
 }
 
-export default Header;
+const mapStateToProps = ({UsersRed}) => ({...UsersRed});
+
+export default connect(mapStateToProps, {getUser})(Header);

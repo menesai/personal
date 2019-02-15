@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+
 .container{
     background-color: rgb(233, 233, 233);
     height: 90vh;
@@ -11,14 +14,14 @@
     border-radius: 7px;
     /* margin-top: 10vh;
     margin-bottom: 10vh; */
-    margin-left: 10vw;
-    padding: 10%;
+    margin-left: 7vw;
+    padding: 13%;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     /* margin: 10vh  10vh 10vh 10vh; */
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .1);
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .3);
 
 }
 
@@ -56,6 +59,7 @@
     margin-right: 14vw;
     display: flex;
     flex-direction: column;
+    font-family: 'Raleway', sans-serif;
 }
 
 .pjname{
@@ -71,6 +75,7 @@
     border: .50px solid #427AA1;
     border-radius: 5px;
     font-size: 24px;
+    font-family: 'Raleway', sans-serif;
 }
 
 .btn-reg:hover{

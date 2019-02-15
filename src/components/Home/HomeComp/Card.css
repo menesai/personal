@@ -1,0 +1,9 @@
+.cards{
+    margin-top: 10vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-img{
+    height: 20vh;
+}

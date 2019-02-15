@@ -1,0 +1,30 @@
+.outer-stp2{
+    background-color: #E9E9E9;
+    height: 90vh;
+    padding-top: 10vh;  
+ 
+}
+
+.step2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: white;
+    height: 60vh;
+    margin-left: 25vw;
+    margin-right: 25vw;
+    border-radius: 7px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .3);
+    padding: 10vh 0 10vh 0;
+}
+
+.ipt-img,.ipt-description,.ipt-goals,.ipt-availability,.ipt-skills{
+    margin-left: 11vw;
+    margin-right: 11vw;
+    padding: 15px;
+}
+
+.stp-prev{
+    margin-left: 11vw;
+    margin-right: 11vw;
+}

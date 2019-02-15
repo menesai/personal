@@ -3,6 +3,7 @@ import './Register.css';
 // import axios from 'axios';
 import {connect} from 'react-redux';
 import {register} from '../../ducks/UsersRed';
+// import Header from '../Header/Header'
 
 class Register extends Component {
     constructor(){
@@ -21,6 +22,10 @@ class Register extends Component {
       console.log(email, last_name, first_name)
       this.props.register(username, password, email, first_name, last_name)
       this.clearInputs();
+      this.setState({accCreate: true})
+      setTimeout(() => {
+        this.setState({accCreate: false})
+      }, 5000);
     }
 
     clearInputs = () => {
@@ -35,8 +40,17 @@ class Register extends Component {
     const {username, password, email, first_name, last_name} =this.state
     return (
       <div className='reg-pg'>
+    
+      {this.state.accCreate
+      ?
+      <div>
+        <h1>Account Created</h1>
+      </div>
+      :
+      null
+      }
         <div className='reg-title'>
-          <h1 className='reg-h1'>Create Your TITLE Account</h1>
+          <h1 className='reg-h1'>Create your TITLE account</h1>
         </div>
         <div className='reg-inputs'>
           <input className='reg-name' placeholder='Name' name='first_name' onChange={this.updateInput}/>

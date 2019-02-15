@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 
 .reg-title{
@@ -8,7 +9,8 @@
 }
 
 .reg-h1{
-    margin-top: 8vh
+    margin-top: 8vh;
+    font-family: 'Raleway', sans-serif;
 }
 
 .reg-inputs{

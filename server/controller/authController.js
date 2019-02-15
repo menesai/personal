@@ -54,6 +54,13 @@ const getUser = (req,res,next) => {
     // const db = req.app.get('db');
     res.json(req.session.user)
 }
+
+
+
+
+
+
+
 module.exports ={
     register,
     login,

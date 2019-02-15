@@ -3,6 +3,7 @@ import './SignUp.css';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {login} from '../../ducks/UsersRed';
+// import Header from '../Header/Header'
 
 class SignUp extends Component {
   constructor(){

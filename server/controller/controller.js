@@ -14,9 +14,9 @@ const getInfo = (req,res) => {
 
 const create = (req,res) => {
     const db = req.app.get('db');
-    const {length, location, type, goals, description, details, skills, availability, name} =req.body;
+    const {name, type, length, location, details, img, description, goals, availability, skills} =req.body;
 
-    db.createProject([length, location, type, goals, description, details, skills, availability, name])
+    db.createProject([name, type, length, location, details, img, description, goals, availability, skills])
     .then(info => {
         res.status(200).json(info)
     })
@@ -41,10 +41,10 @@ const deleteInfo = (req, res) => {
 
 const updateInfo = (req,res) => {
     const db = req.app.get('db');
-    const {length, location, type, goals, description, details, skills, availability, name} =req.body;
+    const {name, type, length, location, details, img, description, goals, availability, skills} =req.body;
     const {projects_id} = req.params;
 
-    db.updateProject([ +projects_id, length, location, type, goals, description, details, skills, availability, name])
+    db.updateProject([ +projects_id, name, type, length, location, details, img, description, goals, availability, skills])
     .then(info => {
         res.status(200).json(info)
     })
@@ -54,9 +54,23 @@ const updateInfo = (req,res) => {
     })
 }
 
+const getProject = (req,res) => {
+    const db = req.app.get('db');
+    const {id} = req.params;
+
+    db.project(id)
+    .then( info => {
+        res.status(200).json(info)
+    })
+    .catch(err => {
+        res.status(500).json({error: "Erorr in get"})
+    })
+}
+
 module.exports = {
     getInfo,
     create,
     deleteInfo,
-    updateInfo
+    updateInfo,
+    getProject
 }

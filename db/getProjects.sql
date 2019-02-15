@@ -1,1 +1,1 @@
-SELECT * FROM projects
+SELECT * FROM projects;

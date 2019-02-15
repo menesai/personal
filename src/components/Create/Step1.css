@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+
+.outer-stp1{
+    background-color: #E9E9E9;
+    height: 100vh;
+    padding-top: 10vh;  
+ 
+}
+
+.step1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: white;
+    height: 80vh;
+    margin-left: 25vw;
+    margin-right: 25vw;
+    border-radius: 7px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .3);
+    padding: 5vh 0 5vh 0;
+}
+
+.ipt-name,.ipt-type,.ipt-length,.ipt-location{
+    margin-left: 11vw;
+    margin-right: 11vw;
+    padding: 15px;
+    font-size: 14px;
+    outline: none;
+    background-color: #F5F5FA;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+}
+
+.ipt-details{
+    margin-right: 14vw;
+    margin-left: 14vw;
+    padding: 14px;
+    border-radius: 6px;
+    outline: none;
+}
+
+.stp1-next{
+   padding: 10px;
+   background-color: #FFDE12;
+   outline: none;
+} 
+
+.stp-next-div{
+    margin-left: 80vh;
+    /* margin-top: 20px; */
+}
+
+.lbl-name, .lbl-type{
+    text-align: center;
+    font-size: 17px;
+    font-family: 'Raleway', sans-serif;
+}

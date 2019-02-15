@@ -3,16 +3,12 @@
 
 
 .nav{
-    background-color: #427AA1;
+    background-color: #697FAE;
     height: 12vh;
     display: flex;
     align-items: center;
     color: white;
     justify-content: center; 
-    /* position: fixed;
-    width: 100%;
-    overflow: hidden;
-    top: 0; */
 }
 
 ul{
@@ -26,20 +22,33 @@ ul{
     color: rgb(216, 150, 141);
 }
 
-li{
+
+.l1, .l2, .l3, .l4{
+    text-decoration: none;
     margin: 25px;
     color: white;
     list-style-type: none;
     cursor: pointer;
     font-family: 'Fjalla One', sans-serif;
     font-size: 22px;
-    
-}
-
-.l1, .l2, .l3, .l4{
-    text-decoration: none;
 }
 
 .signup:hover, .create:hover, .home:hover, .register:hover{
     color: rgb(198, 196, 196);
+}
+
+.signOut{
+    margin-left: 20px;
+    cursor: pointer;
+    background-color: #697FAE;
+    padding: 5px;
+    color: white;
+    font-family: 'Fjalla One', sans-serif;
+    border: none;
+    font-size: 15px;
+}
+
+.signOut:hover{
+    background-color: white;
+    color: #697FAE;
 }
