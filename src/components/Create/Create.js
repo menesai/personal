@@ -4,7 +4,7 @@ import Step2 from './Step2';
 import Step3 from './Step3';
 import {connect} from 'react-redux'
 import {create} from '../../ducks/crudRed';
-import './Create.css'
+import './Create.scss'
 
 class Create extends Component {
   constructor(){

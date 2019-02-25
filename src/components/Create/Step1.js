@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Step1.css';
+import './Step1.scss';
 
 export class Step1 extends Component {
     continue = () =>{

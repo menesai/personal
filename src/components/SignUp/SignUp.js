@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './SignUp.css';
+import './SignUp.scss';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {login} from '../../ducks/UsersRed';
@@ -10,7 +10,7 @@ class SignUp extends Component {
     super();
     this.state ={
       username: '',
-      password: ''
+      password: '',
     }
   }
 
@@ -36,8 +36,8 @@ class SignUp extends Component {
         <div className='signUp'>
           <h1>Sign In</h1>
           <p>Log In Back to Your Account</p>
-          <input className='ipt1' placeholder='Enter Username' name='username' onChange={this.handleInput}/>
-          <input className='ipt2' placeholder='Enter Password' name='password' onChange={this.handleInput}/>
+          <input className='ipt1' required placeholder='Enter Username' name='username' onChange={this.handleInput}/>
+          <input className='ipt2' required placeholder='Enter Password' name='password' onChange={this.handleInput}/>
           <button className='btn-login' onClick={() => this.signIn(username, password)}>Log In</button>
         </div>
         <div className='display-reg'>

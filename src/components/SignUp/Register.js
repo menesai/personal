@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import './Register.css';
-// import axios from 'axios';
+import './Register.scss';
 import {connect} from 'react-redux';
 import {register} from '../../ducks/UsersRed';
-// import Header from '../Header/Header'
 
 class Register extends Component {
     constructor(){
@@ -43,8 +41,8 @@ class Register extends Component {
     
       {this.state.accCreate
       ?
-      <div>
-        <h1>Account Created</h1>
+      <div className='alert1'>
+        <h1 className='reg-test'>Thank you your account was created</h1>
       </div>
       :
       null
@@ -53,11 +51,28 @@ class Register extends Component {
           <h1 className='reg-h1'>Create your TITLE account</h1>
         </div>
         <div className='reg-inputs'>
-          <input className='reg-name' placeholder='Name' name='first_name' onChange={this.updateInput}/>
-          <input className='reg-Lname' placeholder='Last Name' name='last_name' onChange={this.updateInput}/>
-          <input className='reg-email' placeholder='Email' name='email' onChange={this.updateInput}/>
-          <input className='reg-user' placeholder='Username' name='username' onChange={this.updateInput}/>
-          <input className='reg-pas' placeholder='Password' name='password' onChange={this.updateInput}/>
+          <div className='disp1'>
+          <input
+           className='reg-name' 
+           type='text' 
+           placeholder='Name' 
+           name='first_name' 
+           required 
+           onChange={this.updateInput}/>
+          <input 
+          className='reg-Lname' 
+          type='text' 
+          placeholder='Last Name' 
+          name='last_name' 
+          required 
+          onChange={this.updateInput}/>
+          </div>
+          <div className='disp2'>
+          <input className='reg-email' type='text' placeholder='Email' name='email' required onChange={this.updateInput}/>
+          <input className='reg-user' type='text' placeholder='Username' name='username' required onChange={this.updateInput}/>
+          <input className='reg-pas' type='password' placeholder='Password' name='password' required onChange={this.updateInput}/>
+
+          </div>
           <button className='reg-button' onClick={() => this.handleChange(username, password, email, first_name, last_name)}>Submit</button>
         </div>
       </div>

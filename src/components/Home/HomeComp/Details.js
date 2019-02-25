@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-// import {connect} from 'react-redux';
-// import {getProject} from '../../../ducks/crudRed';
 import axios from 'axios';
-// import { get } from 'https';
+import DisplayInfo from './DisplayInfo';
+
 
 class Details extends Component {
     constructor(){
@@ -16,19 +15,35 @@ class Details extends Component {
       axios
       .get(`/api/project/${this.props.match.params.id}`)
       .then(res => {
+        console.log(res)
         this.setState({projectInfo: res.data})
       })
     }
 
   render() {
+    let moreDisplay = this.state.projectInfo.map((fact, i) => {
+      return (
+      <DisplayInfo
+        key={i}
+        name={fact.name}
+        type={fact.type}
+        length={fact.length}
+        location={fact.location}
+        details={fact.details}
+        img={fact.img}
+        description={fact.description} 
+        goals={fact.goals}
+        availability={fact.availability}
+        skills={fact.skills}
+        id={fact.projects_id} 
+      />)
+    })
     return (
       <div>
-        <p>this is more details about project</p>
+        {moreDisplay}
       </div>
     )
   }
 }
-
-// const mapStateToProps = ({crudRed}) => ({...crudRed});
 
 export default Details

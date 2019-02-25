@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 // import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {getUser} from '../../ducks/UsersRed';
-import './Header.css';
+import './Header.scss';
 import H1 from './H1';
 import H2 from './H2';
 

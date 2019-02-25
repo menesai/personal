@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux';
-import {getInfo} from '../../../ducks/crudRed';
+import {getInfo, deleteInfo} from '../../../ducks/crudRed';
 import {Link} from 'react-router-dom'
-import './Card.css'
+import './Card.scss';
+import HomeHeader from './HomeHeader'
 
  class Card extends Component {
      
@@ -15,24 +16,27 @@ import './Card.css'
   render() {
       let displayCard = this.props.info.map((card, i) => {
           return(
-            <Link to={`/projects/${card.projects_id}`}>
-              <div key={i}>
-                <img className='card-img' src={card.img} alt='project'/>
-                <h3>{card.name}</h3>
-                <p>See More</p>
-              </div>
-            </Link>
+              <div key={i} className='card-info'>
+                <Link className='card-link' to={`/projects/${card.projects_id}`}><img className='card-img' src={card.img} alt='project'/></Link>
+                <div className='card-container'>
+                <Link className='card-link' to={`/projects/${card.projects_id}`}><h2 className='card-text'>{card.name}</h2></Link>
+                <Link className='card-link' to={`/projects/${card.projects_id}`}><p className='card-text'>See More</p></Link>
+                </div>
+                <button onClick={() => this.props.deleteInfo(card.projects_id)}>X</button>
+              </div>            
           )
-      })
-    return (
-      <div className='cards'>
-        {displayCard}
-        <h1>hello</h1>
-      </div>
+        })
+        return (
+        <div>
+         <HomeHeader/>
+        <div className='cards'>
+          {displayCard}
+        </div>
+        </div>
     )
   }
 }
 
 const mapStateToProps = ({crudRed}) => ({...crudRed});
 
-export default connect(mapStateToProps, {getInfo})(Card)
+export default connect(mapStateToProps, {getInfo, deleteInfo})(Card)

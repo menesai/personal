@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Step2.css'
+import './Step2.scss'
 
 export class Step2 extends Component {
 
@@ -17,6 +17,7 @@ export class Step2 extends Component {
     return (
         <div className='outer-stp2'>
         <div className='step2'>
+            <small className='stp2-img'>Image</small>
             <input
             // type='file'
             className='ipt-img'
@@ -25,6 +26,7 @@ export class Step2 extends Component {
             onChange={handleInputss}
             name='img'
             />
+            <small className='stp2-img'>Description</small>
             <textarea
             className='ipt-description'
             placeholder='description'
@@ -32,6 +34,7 @@ export class Step2 extends Component {
             onChange={handleInputss}
             name='description'
             />
+            <small className='stp2-img'>Goals</small>
             <input
             className='ipt-goals'
             placeholder='goals'
@@ -39,6 +42,7 @@ export class Step2 extends Component {
             onChange={handleInputss}
             name='goals'
             />
+            <small className='stp2-img'>Availability</small>
             <input
             className='ipt-availability'
             placeholder='availability'
@@ -46,6 +50,7 @@ export class Step2 extends Component {
             onChange={handleInputss}
             name='availability'
             />
+            <small className='stp2-img'>Skills</small>
             <input
             className='ipt-skills'
             placeholder='skills'
@@ -53,9 +58,10 @@ export class Step2 extends Component {
             onChange={handleInputss}
             name='skills'
             />
-            
+            <div className='step2-btns'>
             <button className='stp-prev' onClick={this.back}>Previous</button>
-            <button className='stp1-next' onClick={this.continue}>nextStep</button>
+            <button className='stp1-next' onClick={this.continue}>Next</button>
+            </div>
         </div>
     </div>
     )

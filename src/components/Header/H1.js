@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {logout} from '../../ducks/UsersRed';
-import './Header.css'
+import './Header.scss'
 
 class H1 extends Component {
 

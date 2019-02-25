@@ -1,10 +1,30 @@
 import React, { Component } from 'react'
-import './HomeHeader.css';
+import './HomeHeader.scss';
+import {connect} from 'react-redux'
+import {getInfo} from '../../../ducks/crudRed'
 
 class HomeHeader extends Component {
+  constructor(){
+    super();
+    this.state ={
+      typepj: ''
+    }
+  }
+
+  componentDidMount(){
+    this.props.getInfo();
+  }
+
+  handleType = (val) => {
+    this.setState({typepj: val})
+  }
 
 
   render() {
+    // let filterType = this.props.getInfo.filter(name => {
+
+    // })
+
     return (
       <div className='homePg'>
         <div className='home-img'/>
@@ -14,7 +34,7 @@ class HomeHeader extends Component {
                <p className='home-head-p'>A collection of websites and applications using the React or React Native JavaScript library.</p>
             </div>
           <div className='home-select'>
-            <select >
+            <select className='h-select' onChange={(e) => this.handleType(e.target.value)} >
               <option>What are you good?</option>
               <option>Vue</option>
               <option>React</option>
@@ -30,4 +50,6 @@ class HomeHeader extends Component {
   }
 }
 
-export default HomeHeader;
+const mapStateToProps = ({crudRed}) => ({...crudRed});
+
+export default connect(mapStateToProps, {getInfo})(HomeHeader);

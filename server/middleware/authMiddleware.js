@@ -9,4 +9,10 @@
      if(!req.sesssion.user.admin){
          return res.status(200).json("You're Not an Admin")
      }
+     next();
+ }
+
+ module.exports ={
+     usersOnly,
+     adminsOnly
  }

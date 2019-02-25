@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+
+.reg-title{
+    text-align: center;
+    height: 20vh;
+   
+}
+
+.reg-h1{
+    margin-top: 8vh;
+    font-family: 'Raleway', sans-serif;
+}
+
+.reg-inputs{
+    width: 100%;
+    background-color: #E9E9E9;
+    height: 70vh;
+    padding-top: 10vh;
+}
+
+.reg-pas, .reg-user, .reg-email{
+    padding: 15px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+}
+
+.reg-name, .reg-Lname{
+    width: 25vw;
+    margin: 20px;
+    padding: 15px;
+    font-size: 15px;
+    outline: none;
+    border: none;
+}
+
+.reg-button{
+    width: 20vw;
+    padding: 15px;
+    margin-top: 10vh;
+    margin-left: 41.1vw;
+    background-color: #FFDE12;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.reg-button:hover{
+    background-color: #CEB001;
+}
+
+.disp1{
+ display: flex;
+ justify-content: center;
+ margin-left: 30vw;
+ margin-right: 30vw;
+ padding: 15px;
+}
+
+.disp2{
+ margin-left: 30vw;
+ margin-right: 30vw;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ height: 25vh;
+}
+
+.alert1{
+  background-color: lightblue;
+  position: absolute;
+  height: 20vh;
+  margin-top: 30vh;
+  margin-right: 20vw;
+  margin-left: 33vw;
+  z-index: 2;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+// @keyframes zoomIn {
+//     to {
+//       opacity: 1;
+//     }
+//     from {
+//         opacity: 0;
+//       }
+    
+//   }
+  
+//   .alert {
+//     animation-name: zoomIn;
+//   }

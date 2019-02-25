@@ -38,17 +38,26 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-/* 
-.homePg{
-    height: 200vh;
-} */
 
 .h-header-btn{
     padding: 15px 30px;
     border-radius: .25rem;
+    font-size: 15px;
+    background-color: #FFDE12;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+.h-header-btn:hover{
+    background-color: #CEB001;
 }
 
-.h-header-select{
-    padding: .5rem .75rem;
-
+.h-select{
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;
+    padding: 15px 30px;
+    font-size: 15px;
+    outline: none;
+    border: none;
 }

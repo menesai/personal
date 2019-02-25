@@ -27,11 +27,3 @@
 // }
 
 
-
-
-
-
-
-module.exports = {
-send
-}

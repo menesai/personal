@@ -3,7 +3,6 @@ import axios from 'axios';
 
 const intialState = {
     info: [],
-    // singleInfo: []
 }
 
 
@@ -22,12 +21,6 @@ export const getInfo = () => {
     }
 }
 
-// export const getProject = (id) => {
-//     return{
-//         type: GET_PROJECT,
-//         payload: axios.get(`/api//api/project/${this.props.match.params.id}`)
-//     }
-// }
 
 export const create = (name, type, length, location, details, img, description, goals, availability, skills) => {
     return {

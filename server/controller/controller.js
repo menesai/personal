@@ -28,8 +28,9 @@ const create = (req,res) => {
 
 const deleteInfo = (req, res) => {
     const db = req.app.get('db');
+    const { id } = req.params;
 
-    db.deleteProject(req.params.id)
+    db.deleteProject(id)
     .then(info => {
         res.status(200).json(info)
     })

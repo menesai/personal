@@ -21,7 +21,7 @@
     padding: 5vh 0 5vh 0;
 }
 
-.ipt-name,.ipt-type,.ipt-length,.ipt-location{
+.ipt-name,.ipt-length,.ipt-location{
     margin-left: 11vw;
     margin-right: 11vw;
     padding: 15px;
@@ -45,7 +45,15 @@
    padding: 10px;
    background-color: #FFDE12;
    outline: none;
+   border-radius: 5px;
+   border: none;
+   cursor: pointer;
+   font-size: 15px;
 } 
+
+.stp1-next:hover{
+    background-color: #CEB001;
+}
 
 .stp-next-div{
     margin-left: 80vh;
@@ -56,4 +64,16 @@
     text-align: center;
     font-size: 17px;
     font-family: 'Raleway', sans-serif;
+}
+
+.ipt-type{
+    margin-left: 15vw;
+    margin-right: 15vw;
+    background-color: #F5F5FA;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    line-height: 30px;
+    text-indent: 110px;
+    outline: none;
 }
