@@ -7,7 +7,8 @@ class Details extends Component {
     constructor(){
       super();
       this.state ={
-        projectInfo: []
+        projectInfo: [],
+        newNamwe: ''
       }
     }
 
@@ -16,6 +17,17 @@ class Details extends Component {
       .get(`/api/project/${this.props.match.params.id}`)
       .then(res => {
         console.log(res)
+        this.setState({projectInfo: res.data})
+      })
+    }
+
+    updateProject = (projects_id, newName) => {
+      // e.preventDefault();
+      //     this.props.updateInfo(this.props.project_id, this.state.updtName)
+      //     console.log(this.props)
+      axios
+      .put(`/api/update/${projects_id}`, {newName})
+      .then(res => {
         this.setState({projectInfo: res.data})
       })
     }
@@ -36,6 +48,8 @@ class Details extends Component {
         availability={fact.availability}
         skills={fact.skills}
         id={fact.projects_id} 
+        update={this.updateProject}
+        newName={this.state}
       />)
     })
     return (

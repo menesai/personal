@@ -1,0 +1,113 @@
+.outer-cont-exp{
+ background: rgba(0,0,0, 0.3);
+ width: 100%;
+ height: 100%;
+ left: -0%;
+ right: -0%;
+ top: 0;
+ position: absolute;
+ z-index: 2;
+ position: fixed;
+}
+
+.cont-exp{
+    background-color: white;
+    height: 90vh;
+    width: 40vw;
+    position: absolute;
+    z-index: 3;
+    top: 3%;
+    left: 30vw;
+    bottom: 5vh;
+    // border: 1px solid black;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .3);
+    border-radius: 5px;
+}
+
+.exp-title{
+    text-align: center;
+}
+
+.exp-cancel{
+    margin-left: 1vw;
+    margin-top: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+    font-size: 13px;
+    outline: none;
+}
+
+.exp-input1{
+    height: 20vh;
+    // border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 2vh 3vw 2vh 3vw;
+}
+
+.exp-ipt{
+    padding: 15px;
+    outline: none;
+    font-size: 13px; 
+    background-color: #F5F5FA;   
+}
+
+.exp-input2{
+    // border: 1px solid black;  
+    margin: 1vh 3vw 1vh 3vw;
+    display: flex;
+    justify-content: space-between;
+    height: 5vh;
+}
+
+.exp-small{
+   margin: 0vh 0vh 1vh 3.5vw;
+}
+
+.exp-select{
+    width: 16vw;
+    height: 5vh;
+    background-color: #F5F5FA;
+    font-size: 13px;
+    outline: none;
+}
+
+.exp-input3{
+    // border: 1px solid black;
+    height: 15vh;
+    margin: 5vh 3vw 0 3vw; 
+}
+
+
+.exp-textarea{
+    height: 100%;
+    width: 100%;
+    margin-top: 1vh;
+    outline: none;
+    text-indent: 10px;
+    padding: 5px;
+    font-size: 15px;
+}
+
+.addForm-exp{   
+    // border: 1px solid black;
+    margin: 8vh 3vw 0 3vw; 
+    height: 6vh;
+}
+
+.exp-add{
+    width: 100%;
+    height: 100%;
+    font-size: 17px;
+    background-color: #FFDE12;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.exp-add:hover{
+    background-color:#CEB001; 
+}

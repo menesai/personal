@@ -77,3 +77,25 @@
     text-indent: 110px;
     outline: none;
 }
+
+
+//iphone views
+@media(max-width: 375px){
+    .step1{
+        width: 100vw;
+        margin-left: 0vw;
+        height: 100%;
+    }
+
+    .stp1-next{
+        margin-left: 70vw;
+    }
+
+    .stp-next-div{
+        margin-left: 0vw;
+    }
+
+    .outer-stp1{
+        padding-top: 0vh;
+    }
+}

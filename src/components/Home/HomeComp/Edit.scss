@@ -1,0 +1,20 @@
+.outer-edit{
+    position: absolute;
+    z-index: 4;
+    background: rgba(0,0,0, 0.3);
+    height: 132%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+}
+
+.inner-edit{
+    background-color: white;
+    position: absolute;
+    z-index: 5;
+    height: 70vh;
+    width: 50vw;
+    left: 24vw;
+    top:5%;
+    position: fixed;
+}

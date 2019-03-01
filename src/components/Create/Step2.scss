@@ -43,7 +43,18 @@
     margin-top: 20px;
     justify-content: center;
     justify-content: space-around;
+    // border: solid 1px solid;
 }
+
+.stp2-next{
+    padding: 10px;
+    background-color: #FFDE12;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+ } 
 
 .stp-prev{
     padding: 10px;
@@ -55,6 +66,29 @@
     font-size: 15px;
 }
 
-.stp-prev:hover{
+.stp-prev:hover, .stp2-next:hover{
     background-color: #CEB001;
+}
+
+@media(max-width: 375px){
+    .outer-stp2{
+        padding-top: 0vh;
+    }
+
+    .step2{
+        width: 100%;
+        margin-left: 0vw;
+    }
+
+    .step2-btns{
+        // border: solid 1px black;
+        justify-content: space-between;
+        width: 90%;
+        margin-left: 5vw;
+    }
+
+    .stp2-next{
+        margin-left: 0vw;
+    }
+
 }

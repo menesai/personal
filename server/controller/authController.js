@@ -1,4 +1,6 @@
 const bcrypt = require('bcryptjs');
+const nodemailer = require('nodemailer');
+
 
 const register = async (req,res,next) => {
     const db = req.app.get('db');
@@ -13,10 +15,33 @@ const register = async (req,res,next) => {
                 last_name: req.body.last_name,
             })
             res.json({username: response[0].username})
-        } catch(err){
             console.log(err)
             res.status(401).json("error with register")
+        } catch(err){
         }
+            
+        var transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+              user: 'menesai99@gmail.com',
+              pass: '@Meneses480'
+            }
+          });
+          
+          var mailOptions = {
+            from: 'menesai99@gmail.com',
+            to: 'saidmeneses1@live.com',
+            subject: 'Project',
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+          };
+          
+          transporter.sendMail(mailOptions, function(error, info){
+            if (error) {
+              console.log(error);
+            } else {
+              console.log('Email sent: ' + info.response);
+            }
+          });
 }
 
 const login = (req,res) => {
@@ -43,6 +68,7 @@ const login = (req,res) => {
             }
         }
     })
+
 }
 
 const logout = (req,res,next) => {

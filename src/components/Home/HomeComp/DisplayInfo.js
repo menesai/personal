@@ -1,10 +1,16 @@
 import React from 'react'
 import './DisplayInfo.scss'
 import {Link} from 'react-router-dom';
+import Edit from './Edit'
 
 const DisplayInfo = (props) => {
   return (
     <div className='dispInfo-container'>
+      <Edit
+        update={props.update}
+        id={props.id}
+        newName={props.newName}
+      />
       <div className='fmt-13'>
       <img className='disp-info-img' src={props.img} alt='project'/>
       <h1 className='Di-h1'>{props.name}</h1>

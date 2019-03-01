@@ -6,8 +6,7 @@ const session = require('express-session');
 const {getInfo, create, deleteInfo, updateInfo, getProject} = require('./controller/controller');
 const {register, login, logout, getUser} = require('./controller/authController');
 const {usersOnly, adminsOnly} = require('./middleware/authMiddleware');
-// const nodeMailer = require('nodemailer');
-
+const {applyCreate} = require('./controller/applyController');
 
 const app = express();
 app.use(json());
@@ -39,6 +38,9 @@ app.post('/auth/register', register);
 app.post('/auth/login', login);
 app.get('/auth/logout', logout);
 app.get('/auth/user', getUser);
+
+//apply Info
+app.post('/api/apply', applyCreate);
 
 
 const port = process.env.SERVER_PORT || 5000;

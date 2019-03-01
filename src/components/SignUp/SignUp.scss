@@ -85,3 +85,33 @@ $font-1: 'Raleway', sans-serif;
     color: $color-2;
     cursor: pointer;
 }
+
+//ipad size
+@media(max-width: 1024px){
+    .display-reg{
+        display: none;
+    }
+
+    .signUp{
+        margin-left: 12vw;
+        width: 50vw;
+        // border: 1px solid black;
+    }
+
+    .btn-login{
+        font-size: 15px;
+    }
+}
+
+//iphone 6/7/8
+@media(max-width: 375px){
+    .signUp{
+        width: 80vw;
+        margin-left: 0vw;
+    }
+
+    .ipt1, .ipt2{
+        margin: 0px;
+    }
+
+}

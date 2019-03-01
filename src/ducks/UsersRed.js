@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const intialState = {
-    user: {}
+    user: {},
+    isLoading: false
 }
 
 
@@ -46,6 +47,7 @@ export const getUser = () => {
 
 //this where they get exported 
 export default function UsersRed(state = intialState, action){
+    // console.log(action.payload)
     switch(action.type){
         case `${LOGIN}_FULFILLED`:
         return{
@@ -62,6 +64,7 @@ export default function UsersRed(state = intialState, action){
         case `${LOGOUT}_FULFILLED`:
             return {
                 ...state,
+                isLoading: false,
                 user: action.payload.data
             }
 

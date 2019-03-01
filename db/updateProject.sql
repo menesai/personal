@@ -7,7 +7,8 @@ SET name = $2,
     img = $7,
     description = $8,
     goals = $9,
-    availability = $10
+    availability = $10,
+    skills = $11
     WHERE projects_id = $1;
 
 SELECT * FROM projects;

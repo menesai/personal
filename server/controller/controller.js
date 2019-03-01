@@ -43,9 +43,9 @@ const deleteInfo = (req, res) => {
 const updateInfo = (req,res) => {
     const db = req.app.get('db');
     const {name, type, length, location, details, img, description, goals, availability, skills} =req.body;
-    const {projects_id} = req.params;
+    const {id} = req.params;
 
-    db.updateProject([ +projects_id, name, type, length, location, details, img, description, goals, availability, skills])
+    db.updateProject([ +id, name, type, length, location, details, img, description, goals, availability, skills])
     .then(info => {
         res.status(200).json(info)
     })

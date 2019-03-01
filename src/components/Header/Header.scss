@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One');
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Kaushan+Script');
 
-
 .nav{
     background-color: #697FAE;
     height: 12vh;
@@ -20,6 +19,7 @@ ul{
     margin-right: 3vw;
     font-family: 'Kaushan Script', cursive;
     color: rgb(216, 150, 141);
+    font-size: 20px;
 }
 
 
@@ -51,4 +51,95 @@ ul{
 .signOut:hover{
     background-color: white;
     color: #697FAE;
+}
+
+.logosvg{
+  height: 4vh;
+  position: absolute;
+  z-index: 2;
+}
+
+.ham{
+    display: none;
+ }
+
+.nav-ul{
+    margin-right: 0vw;
+    width:40%;
+}
+
+
+
+// ipad media quires
+@media(max-width: 1024px){
+    .nav-ul{
+        display: none;
+    }
+
+    .ham{
+        display: block;
+        position: absolute;
+        z-index: 3;
+        left: 2%;
+        cursor: pointer;
+    }
+
+    .slidebar{
+        position: relative;
+        position: sticky;
+        z-index: 3;
+        right: 9%;
+        height: 6vh;
+        opacity: 0;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .slidebar-1{
+    background-color: black; 
+    position: absolute;
+    position: fixed;
+    left: -26%;
+    right: 10%;
+    width: 50%;
+    z-index: 10;
+    top: 0%;
+    // bottom: 0/
+    // border: 1px solid white;
+    height: 120vh;
+    }
+
+    .nav-ul{
+        position: absolute;
+        z-index: 10;
+    }
+
+    .white{
+        // color: white;
+        background-color: white;
+        margin-left: 28vw;
+        width: 5vw;
+        cursor: pointer;
+    }
+
+    .home, .create, .signup, .register{
+        margin-left: 28vw;
+        margin-right: 5vw;
+        margin-top: 3vh;
+        outline: none;
+    }
+
+
+}
+
+// iphone x media queries
+@media(max-width: 375px){
+    .slidebar-1{
+        width: 70%;
+    }
+
+    .slidebar{
+        outline: none;
+    }
+
 }

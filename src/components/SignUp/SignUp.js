@@ -3,7 +3,7 @@ import './SignUp.scss';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {login} from '../../ducks/UsersRed';
-// import Header from '../Header/Header'
+import {Redirect} from 'react-router-dom';
 
 class SignUp extends Component {
   constructor(){
@@ -29,7 +29,11 @@ class SignUp extends Component {
   }
 
   render() {
+    if (this.props.user.username) {
+      return <Redirect push to="/" />;
+    }
     const {username, password}= this.state
+
       // if(this.props.login){}
     return (
       <div className='container'>
