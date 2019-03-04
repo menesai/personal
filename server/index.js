@@ -7,6 +7,8 @@ const {getInfo, create, deleteInfo, updateInfo, getProject} = require('./control
 const {register, login, logout, getUser} = require('./controller/authController');
 const {usersOnly, adminsOnly} = require('./middleware/authMiddleware');
 const {applyCreate} = require('./controller/applyController');
+const path = require('path'); // Usually moved to the start of file
+
 
 const app = express();
 app.use(json());
@@ -16,6 +18,12 @@ massive(process.env.CONNECTION_STRING)
     app.set('db', db)
     console.log('Connected to database')
 })
+
+app.use( express.static( `${__dirname}/../build` ) );
+
+app.get('*', (req, res)=>{
+    res.sendFile(path.join(__dirname, '../build/index.html'));
+});
 
 app.use(session ({
     secret: process.env.SESSION_SECRET,
