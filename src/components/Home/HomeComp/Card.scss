@@ -4,6 +4,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    // border: 1px solid black;
 }
 .card-info{
 margin: 40px;
@@ -55,4 +56,16 @@ margin: 40px;
 .card-text:hover:after { 
     width: 100%; 
     left: 0; 
+  }
+
+  @media(max-width: 1024px){
+    .card-img{
+        width: 38vw;
+    }
+  }
+
+  @media(max-width: 375px){
+    .card-img{
+        width: 85vw;
+    }
   }

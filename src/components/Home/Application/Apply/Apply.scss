@@ -89,3 +89,29 @@
     background-color: #697FAE;
     color: white;
 }
+
+
+@media(max-width: 1024px){
+.apply-cont{
+    margin-left: 0vw;
+}
+.apply-cont-box{
+    margin: 0 10vh 0 10vh;
+}
+
+.menu{
+    margin-left: 17vw;
+}
+
+.apply-sbmit{
+    margin-left: 17vw;
+    margin-top: 10vw;
+}
+}
+
+
+@media(max-width: 375px){
+    .apply-cont-box{
+        margin: 0 3vh 0 3vh;
+    }
+}

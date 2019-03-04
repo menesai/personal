@@ -1,18 +1,33 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
-.home-img{
-    width: 100%;
+
+.homePg{
+    background: linear-gradient(to left, #4CA1AF, #2C3E50);
     height: 45vh;
-    background-color: rgb(88, 116, 177);
+//     background-repeat: no-repeat;
+//    background-size: 1440px 334px;
+    // border: solid 1px white;
 }
 
 .home-title{
     margin-left: 10vw;
     margin-right: 10vw;
-    margin-bottom: 10vh;
+    // margin-bottom: 10vh;
     text-align: center;
     font-family: 'Raleway', sans-serif;
     color: white;
+    // border: solid 1px white;
+
+}
+
+.home-header-info{
+    // border: solid 1px white;
+    margin-bottom: 10vh;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    text-align: center
 }
 
 .home-head-h1{
@@ -22,6 +37,7 @@
 .home-head-p{
     font-size: 20px;
     margin-top: 10px;
+    color: rgb(228, 228, 228);
 }
 
 .home-select{
@@ -30,6 +46,7 @@
    display: flex;
    justify-content: space-evenly;
    align-items: center;
+//    border: solid 1px white;
 }
 
 .home-filter{
@@ -60,4 +77,48 @@
     font-size: 15px;
     outline: none;
     border: none;
+}
+
+
+@media(max-width: 1024px){
+    .home-select{
+        display: none;
+    }
+    .home-title{
+    //  border: solid 1px white;
+     margin-left: -5vw;
+     margin-right: -5vw;
+     margin-top: -5vh;
+
+    }
+    .home-header-info{
+        // border: solid white 1px;
+        margin-left: 0vw;
+        margin-right: 0vw;
+    }
+}
+
+
+
+@media(max-width: 375px){
+    .home-select{
+        display: none;
+    }
+
+    .home-title{
+    // border: solid white 1px;
+    margin-left: -15vw;
+    margin-right: -15vw;
+    }
+    .home-head-h1{
+        font-size: 2.5rem;
+    }
+
+    .home-header-info{
+        // border: solid white 1px;
+        margin-left: -9vw;
+        margin-right: -9vw;
+    }
+
+    // .home-head-p{}
 }

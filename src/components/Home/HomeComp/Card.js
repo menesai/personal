@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux';
 import {getInfo, deleteInfo} from '../../../ducks/crudRed';
+import {getUser} from '../../../ducks/UsersRed';
 import {Link} from 'react-router-dom'
 import './Card.scss';
 import HomeHeader from './HomeHeader'
@@ -10,7 +11,8 @@ import HomeHeader from './HomeHeader'
 
     componentDidMount(){
         this.props.getInfo();
-        // console.log(this.props.getInfo())
+        this.props.getUser();
+        console.log(this.props.getUser())
     }
 
   render() {
@@ -37,6 +39,10 @@ import HomeHeader from './HomeHeader'
   }
 }
 
-const mapStateToProps = ({crudRed}) => ({...crudRed});
+const mapStateToProps = state => {
+  const {info} = state.crudRed
+  const {user}= state.UsersRed
+    return{info, user};
+ };
 
-export default connect(mapStateToProps, {getInfo, deleteInfo})(Card)
+export default connect(mapStateToProps, {getInfo, deleteInfo, getUser})(Card)

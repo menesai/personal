@@ -21,8 +21,8 @@ const DisplayInfo = (props) => {
       <Link to={`/application/${props.id}`}><button className='vol'>Volunteer</button></Link>
         </div> 
         <div className='btm2-disp'>
-        <h3 className='loc-disp'>Location:{' '}{props.location}</h3>
-        <h3 className='leng-disp'>Libary: {''}{props.type}</h3>
+        <p className='loc-disp'><strong>Location:</strong>{' '}{props.location}</p>
+        <p className='leng-disp'><strong>Libary:</strong>{' '}{props.type}</p>
           </div> 
       </div>
     <div className='outer-cont-2'>

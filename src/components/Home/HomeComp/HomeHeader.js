@@ -27,12 +27,14 @@ class HomeHeader extends Component {
 
     return (
       <div className='homePg'>
-        <div className='home-img'/>
+        {/* <div className='home-img'/> */}
           <div className='home-filter'>
             <div className='home-title'>
              <h1 className='home-head-h1'>Title Of Project </h1>
-               <p className='home-head-p'>A collection of websites and applications using the React or React Native JavaScript library.</p>
             </div>
+              <div className='home-header-info'>
+               <p className='home-head-p'>A collection of websites and applications using the React or React Native JavaScript library.</p>
+              </div>
           <div className='home-select'>
             <select className='h-select' onChange={(e) => this.handleType(e.target.value)} >
               <option>What are you good?</option>

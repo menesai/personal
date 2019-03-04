@@ -2,7 +2,8 @@
 
 
 .outer-stp1{
-    background-color: #E9E9E9;
+    background-image: url('../images/ignasi_pattern_s.png');
+    // background-color: #E9E9E9;
     height: 100vh;
     padding-top: 10vh;  
  
@@ -58,6 +59,7 @@
 .stp-next-div{
     margin-left: 80vh;
     /* margin-top: 20px; */
+    // border: solid 1px black;
 }
 
 .lbl-name, .lbl-type{
@@ -78,8 +80,31 @@
     outline: none;
 }
 
-
 //iphone views
+@media(max-width: 1024px){
+    .stp1-next{
+        margin-left: 68vw;
+        padding: 13px;
+        width: 15vw;
+    }
+
+    .outer-stp1{
+        padding-top: 0;
+    }
+
+    .step1{
+        width: 100%;
+        margin-left: 0vw;
+        height: 100vh;
+    }
+
+    .stp-next-div{
+        // border: solid 1px black;
+        margin-left: 10vw;
+        width: 80%;
+    }
+}
+
 @media(max-width: 375px){
     .step1{
         width: 100vw;
@@ -89,10 +114,13 @@
 
     .stp1-next{
         margin-left: 70vw;
+        padding: 10px;
+        width: 20vw;
     }
 
     .stp-next-div{
         margin-left: 0vw;
+        // border: solid 1px black;
     }
 
     .outer-stp1{

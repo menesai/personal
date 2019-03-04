@@ -1,5 +1,6 @@
 .outer-stp2{
-    background-color: #E9E9E9;
+    background-image: url('../images/ignasi_pattern_s.png');
+    // background-color: #E9E9E9;
     height: 100vh;
     padding-top: 10vh;  
  
@@ -56,7 +57,7 @@
     font-size: 15px;
  } 
 
-.stp-prev{
+.stp2-prev{
     padding: 10px;
     background-color: #FFDE12;
     outline: none;
@@ -66,9 +67,29 @@
     font-size: 15px;
 }
 
-.stp-prev:hover, .stp2-next:hover{
+.stp2-prev:hover, .stp2-next:hover{
     background-color: #CEB001;
 }
+
+@media(max-width: 1024px){
+    .outer-stp2{
+        padding-top: 0vh;
+    }
+
+    .step2{
+        width: 100%;
+        margin-left: 0vw;
+        height: 80vh
+    }
+
+    .stp2-next, .stp2-prev{
+        padding: 15px;
+        width: 15vw;
+    }
+    
+}
+
+
 
 @media(max-width: 375px){
     .outer-stp2{
@@ -87,8 +108,10 @@
         margin-left: 5vw;
     }
 
-    .stp2-next{
+    .stp2-next, .stp2-prev{
         margin-left: 0vw;
+        padding: 10px;
+        width: 20vw;
     }
 
 }

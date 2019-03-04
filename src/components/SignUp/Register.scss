@@ -1,10 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
 
+.reg-pg{
+        background: linear-gradient(to left, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding-top: 1vh;
+}
+
 .reg-title{
     text-align: center;
-    height: 20vh;
-   
+    height: 14vh;
+    color: white;
+    // background: linear-gradient(to left, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .reg-h1{
@@ -14,7 +21,7 @@
 
 .reg-inputs{
     width: 100%;
-    background-color: #E9E9E9;
+    background-image: url('../images/ignasi_pattern_s.png');
     height: 70vh;
     padding-top: 10vh;
 }

@@ -111,3 +111,32 @@
 .exp-add:hover{
     background-color:#CEB001; 
 }
+
+@media(max-width: 1024px){
+    .cont-exp{
+        width: 80vw;
+        left: 10%;
+    }
+    .exp-input2{
+        // border: solid 1px black;
+    }
+    .exp-select{
+        width: 40%;
+    }
+
+    .exp-textarea{
+        border: solid .50px black;
+        border-radius: 5px;
+    }
+}
+
+@media(max-width: 375px){
+    .cont-exp{
+        width: 100%;
+        left: 0%;
+    }
+
+    .exp-textarea{
+        width: 98%;
+    }
+}

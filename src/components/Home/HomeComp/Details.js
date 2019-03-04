@@ -22,9 +22,6 @@ class Details extends Component {
     }
 
     updateProject = (projects_id, newName) => {
-      // e.preventDefault();
-      //     this.props.updateInfo(this.props.project_id, this.state.updtName)
-      //     console.log(this.props)
       axios
       .put(`/api/update/${projects_id}`, {newName})
       .then(res => {

@@ -1,5 +1,6 @@
 .stp3-cont{
-    background-color:#E9E9E9;
+    background-image: url('../images/ignasi_pattern_s.png');
+    // background-color:#E9E9E9;
     height: 100vh;
     padding-top: 5vh;  
 }
@@ -39,10 +40,28 @@
    margin-bottom: 4vh;
 }
 
+// .stp-p{
+//     margin-left: 0vw;
+// }
+
 .stp3-btns{
     margin-top: 10px;
     display: flex;
     justify-content: space-around;
+}
+
+.stp3-prev{
+    padding: 10px;
+    background-color: #FFDE12;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.stp3-prev:hover{
+    background-color: #CEB001;
 }
 
 .stp3-add{
@@ -60,3 +79,62 @@
     background-color: rgb(219, 219, 219);
     color: rgb(76, 107, 172);
 }
+
+//medias for ipad
+@media(max-width: 768px){
+    .stp3-cont{
+        padding-top: 0vh;
+    }
+
+    .stp3-outer{
+        width: 79%;
+        margin-left: 0vw;
+        height: 100vh;
+    }
+
+    .stp-li-img{
+        margin-left: -40vw;
+        // width: 40vw;
+    }
+
+    .stp-p{
+        margin-bottom: 20px;
+      }
+}
+
+
+
+// for iphone x
+@media(max-width: 375px){
+    .stp3-cont{
+        padding-top: 0vh;
+    }
+
+    .stp3-outer{
+        width: 57%;
+        margin-left: 0vw;
+        height: 130vh;
+    }
+
+    .stp-li-img{
+        margin-left: -58vw;
+        width: 40vw;
+    }
+
+    .li-step3{
+        margin-left: 47vw;
+    }
+
+    .stp-p{
+      margin-left: -3vh;
+      margin-right: -3vh;
+      margin-bottom: 20px;
+    }
+    .stp3-btns{
+        // border: solid black 1px;
+        width: 80vw;
+        justify-content: space-between;
+        margin-left: -11vw;
+    }
+}
+

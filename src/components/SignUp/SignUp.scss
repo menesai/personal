@@ -10,7 +10,8 @@ $color-5: #CEB001;
 $font-1: 'Raleway', sans-serif;
 
 .container{
-    background-color: $color-1;
+    // background-color: $color-1;
+    background-image: url('../images/ignasi_pattern_s.png');
     height: 90vh;
     display: flex;
     flex-direction: row;
@@ -74,14 +75,14 @@ $font-1: 'Raleway', sans-serif;
     padding: 15px;
     outline: none;
     background-color:$color-1;
-    border: .50px solid $color-4;
+    border: .50px solid #46909E;
     border-radius: 5px;
     font-size: 24px;
     font-family: $font-1;
 }
 
 .btn-reg:hover{
-    background-color: $color-4;
+    background: #46909E; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: $color-2;
     cursor: pointer;
 }

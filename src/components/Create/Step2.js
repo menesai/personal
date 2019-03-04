@@ -59,7 +59,7 @@ export class Step2 extends Component {
             name='skills'
             />
             <div className='step2-btns'>
-            <button className='stp-prev' onClick={this.back}>Previous</button>
+            <button className='stp2-prev' onClick={this.back}>Previous</button>
             <button className='stp2-next' onClick={this.continue}>Next</button>
             </div>
         </div>

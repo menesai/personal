@@ -1,4 +1,11 @@
 .home-bkgrd{
-    background-color: #F5F5F5;
-    height: 200vh;
+    background-image: url('../images/ignasi_pattern_s.png');
+    // background-color: #F5F5F5;
+    height: 255vh;
+}
+
+@media(max-width: 375px){
+    .home-bkgrd{
+        height: 460vh;
+    }
 }
