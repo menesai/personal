@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+
+
 .apply-header{
     text-align: center;
     height: 12vh;
@@ -6,6 +10,7 @@
 .apply-header-h1{
     justify-content: center;
     margin-top: 5vh;
+    font-family: 'Raleway', sans-serif;
 }
 
 .apply-cont{
@@ -68,8 +73,9 @@
     background-color: #FFDE12;
     outline: none;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 17px;
     border-radius: 5px;
+    font-family: 'Raleway', sans-serif;
 }
 
 .menu:hover{
@@ -77,12 +83,14 @@
 }
 
 .apply-sbmit{
-    margin: 13vh 13vw 0 13vw;
+    margin: 7vh 13vw 0 13vw;
     width: 50%;
     height: 6vh;
-    border-radius: 5px;
-    font-size: 15px;
-    cursor: pointer; 
+    border-radius: 3px;
+    border: rgb(199, 199, 199) solid 1px;;
+    font-size: 17px;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
 }
 
 .apply-sbmit:hover{

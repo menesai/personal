@@ -1,3 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+
 .app-alert{
-    
+    // border: solid black 1px;
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    border-radius: 4px;
+    text-align: center;
+    margin: 20vh 18vw 0 18vw;
+    background-color: rgb(218, 231, 233); 
+}
+
+.app-h1{
+    color: rgb(87, 87, 87);
+    margin-top: 3vh;
+    font-family: 'Raleway', sans-serif;
+}
+
+.user-auth-links{
+    // border: solid black 1px;
+    display: flex;
+    justify-content: space-around;
+    margin: 5vh 10vw 0 10vw;
+    height: 7vh;
+}
+
+
+.links-auth{
+    outline: none;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+    height: 7vh;
+    width: 9vw;
+    cursor: pointer;
+    background-color: #396676;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.links-auth:hover{
+    background-color: #428191
 }

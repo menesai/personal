@@ -26,14 +26,6 @@ export class Step2 extends Component {
             onChange={handleInputss}
             name='img'
             />
-            <small className='stp2-img'>Description</small>
-            <textarea
-            className='ipt-description'
-            placeholder='description'
-            value={description}
-            onChange={handleInputss}
-            name='description'
-            />
             <small className='stp2-img'>Goals</small>
             <input
             className='ipt-goals'
@@ -57,6 +49,14 @@ export class Step2 extends Component {
             value={skills}
             onChange={handleInputss}
             name='skills'
+            />
+            <small className='stp2-img'>Description</small>
+            <textarea
+            className='ipt-description'
+            placeholder='Description'
+            value={description}
+            onChange={handleInputss}
+            name='description'
             />
             <div className='step2-btns'>
             <button className='stp2-prev' onClick={this.back}>Previous</button>

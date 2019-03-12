@@ -31,8 +31,8 @@ const register = async (req,res,next) => {
           var mailOptions = {
             from: 'menesai99@gmail.com',
             to: 'saidmeneses1@live.com',
-            subject: 'Project',
-            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+            subject: 'codeTribute Account',
+            text: 'Thank you for creating your code tribute Account'
           };
           
           transporter.sendMail(mailOptions, function(error, info){
@@ -61,7 +61,11 @@ const login = (req,res) => {
             if(!isMatch){
                 res.status(401).json({error: "Incorrect password"})
             } else{
-                req.session.user = {username: users[0].username}
+                req.session.user = {
+                    username: users[0].username,
+                    isAdmin: users.admin,
+                    id: users.users_id,
+                }
 
                 return res.json(req.session.user)
                 //res.json({username: users[0].username}
@@ -81,9 +85,18 @@ const getUser = (req,res,next) => {
     res.json(req.session.user)
 }
 
+const oneUser = (req,res) => {
+    const db = req.app.get('db');
+    const {id} = req.params;
 
-
-
+    db.userProfile(id)
+    .then( info => {
+        res.status(200).json(info)
+    })
+    .catch(err => {
+        res.status(500).json({error: "Erorr in get"})
+    })
+}
 
 
 
@@ -91,5 +104,6 @@ module.exports ={
     register,
     login,
     logout,
-    getUser
+    getUser,
+    oneUser
 }

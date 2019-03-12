@@ -29,11 +29,13 @@ const DisplayInfo = (props) => {
     <div className='cont-2'>
       <h1 className='cont2-title'>The Right Volunteer</h1>
       <ul className='li-cont2'>
-      <h3>Skills & Experience</h3>
+      <h3 className='di-h3-t'>Skills & Experience</h3>
       <li className='cont2-li'>{props.goals}</li>
       <li className='cont2-li'>{props.skills}</li>
-      <h3>Availability</h3>
+      <li className='cont2-li'>{props.skill2}</li>
+      <h3 className='di-h3-t'>Availability</h3>
       <li className='cont2-li'>{props.availability}</li>
+      <li className='cont2-li'>{props.ava2}</li>
       <li className='cont2-li'>{props.length}</li>
       </ul>
     </div>

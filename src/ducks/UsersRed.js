@@ -33,7 +33,7 @@ export const register = (username, password, email, first_name, last_name) => {
 export const logout = () => {
     return {
         type: LOGOUT,
-        payload: axios.get('auth/logout')
+        payload: axios.post('/auth/logout')
     }
 }
 

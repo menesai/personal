@@ -29,7 +29,7 @@ class H2 extends Component{
                         show={this.showSlide}
                         />):(null)}
           </div>
-        <div className='title'><h1>Title Of Project</h1></div>
+        <div className='title'><h1>CodeTribute</h1></div>
         <ul className='nav-ul'>
           <Link className='l1' to='/' ><li className='home'>HOME</li></Link>
           <Link className='l2' to='/create' ><li className='create'>POST A PROJECT</li></Link>

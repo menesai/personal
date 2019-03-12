@@ -11,14 +11,10 @@ class Header extends Component {
     this.props.getUser();
   }
 
-  logOut = () => {
-    this.props.logout()
-    console.log(this.props.logOut)
-  }
-
   render() {
     return this.props.user.username?(
-        <H1/>
+        <H1
+        />
         ) : (
           <div>
             <H2/>

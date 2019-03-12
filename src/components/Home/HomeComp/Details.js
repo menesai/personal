@@ -47,6 +47,8 @@ class Details extends Component {
         id={fact.projects_id} 
         update={this.updateProject}
         newName={this.state}
+        skill2={fact.skills2}
+        ava2={fact.availability2}
       />)
     })
     return (

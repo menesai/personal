@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import './Header.scss';
 
 const SideBar2 = (props) => {
+  console.log(props)
   return (
     <div className='slidebar-1 animated slideInLeft'>
             <button className='white' onClick={props.show}>X</button>

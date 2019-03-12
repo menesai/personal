@@ -12,7 +12,8 @@ class Register extends Component {
         email: '',
         username: '',
         password: '',
-        accCreate: false
+        accCreate: false,
+        className: 'animated fadeOutRight'
       }
     }
 
@@ -23,7 +24,7 @@ class Register extends Component {
       this.setState({accCreate: true})
       setTimeout(() => {
         this.setState({accCreate: false})
-      }, 5000);
+      }, 3000);
     }
 
     clearInputs = () => {
@@ -41,14 +42,14 @@ class Register extends Component {
     
       {this.state.accCreate
       ?
-      <div className='alert1'>
-        <h1 className='reg-test'>Thank you your account was created</h1>
+      <div className='alert1 animated fadeInRight' >
+        <h4 className='reg-test'>Thankyou your account was created</h4>
       </div>
       :
       null
       }
         <div className='reg-title'>
-          <h1 className='reg-h1'>Create your TITLE account</h1>
+          <h1 className='reg-h1'>Create your CodeTribute account</h1>
         </div>
         <div className='reg-inputs'>
           <div className='disp1'>

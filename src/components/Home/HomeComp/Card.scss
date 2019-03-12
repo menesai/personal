@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+
 .cards{
     // margin-top: 10vh;
     display: flex;
@@ -34,6 +37,7 @@ margin: 40px;
 .card-text{
     color: black;
     position: relative;
+    font-family: 'Raleway', sans-serif;
 }
 
 .card-link{

@@ -41,7 +41,7 @@ export class Edit extends Component {
       console.log(this.props)
     return (
       <div className=''>
-        <button onClick={this.displayEdit}>edit</button>
+        <button onClick={this.displayEdit}>.</button>
        {this.state.showEdit
        ?(
        <div className='outer-edit'>

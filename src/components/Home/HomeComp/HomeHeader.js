@@ -7,17 +7,13 @@ class HomeHeader extends Component {
   constructor(){
     super();
     this.state ={
-      typepj: ''
+      
     }
   }
 
-  componentDidMount(){
-    this.props.getInfo();
-  }
-
-  handleType = (val) => {
-    this.setState({typepj: val})
-  }
+  // componentDidMount(){
+  //   this.props.getInfo();
+  // }
 
 
   render() {
@@ -30,20 +26,20 @@ class HomeHeader extends Component {
         {/* <div className='home-img'/> */}
           <div className='home-filter'>
             <div className='home-title'>
-             <h1 className='home-head-h1'>Title Of Project </h1>
+             <h1 className='home-head-h1'>CodeTribute</h1>
             </div>
               <div className='home-header-info'>
-               <p className='home-head-p'>A collection of websites and applications using the React or React Native JavaScript library.</p>
+               <p className='home-head-p'>A collection of websites and applications using the React, Vue, Angular, JavaScript library.</p>
               </div>
           <div className='home-select'>
-            <select className='h-select' onChange={(e) => this.handleType(e.target.value)} >
+            <select className='h-select' onChange={(e) => this.props.search(e.target.value)} >
               <option>What are you good?</option>
               <option>Vue</option>
               <option>React</option>
               <option>Angular</option>
               <option>Other</option>
             </select>
-            <button className='h-header-btn'>Search</button>
+            {/* <button className='h-header-btn'>Search</button> */}
           </div>
         </div>
         

@@ -1,7 +1,6 @@
 .outer-stp2{
     background-image: url('../images/ignasi_pattern_s.png');
-    // background-color: #E9E9E9;
-    height: 100vh;
+    height: 120vh;
     padding-top: 10vh;  
  
 }
@@ -11,7 +10,7 @@
     flex-direction: column;
     justify-content: space-around;
     background-color: white;
-    height: 70vh;
+    height: 90vh;
     margin-left: 25vw;
     margin-right: 25vw;
     border-radius: 7px;
@@ -23,20 +22,26 @@
     font-size: 15px;
 }
 
-.ipt-img,.ipt-description,.ipt-goals,.ipt-availability,.ipt-skills{
+.ipt-img,.ipt-goals,.ipt-availability,.ipt-skills{
     margin-left: 11vw;
     margin-right: 11vw;
     padding: 15px;
     outline: none;
     border: none;
     background-color: #F5F5FA;
-    font-size: 18px;
+    font-size: 15px;
     text-align: center;
 }
 
-.ipt-img:hover,.ipt-description:hover,.ipt-goals:hover,.ipt-availability:hover,.ipt-skills:hover{
-    border: 1px solid #697FAE;
-    
+.ipt-description{
+    margin-left: 13vw;
+    margin-right: 13vw;
+    height: 20vh;
+    font-size: 15px;
+    outline: none;
+    padding: 4px;
+    border-radius: 4px;
+    border: rgb(136, 135, 135) solid 1px;
 }
 
 .step2-btns{
@@ -48,19 +53,21 @@
 }
 
 .stp2-next{
-    padding: 10px;
+    padding: 13px;
     background-color: #FFDE12;
     outline: none;
     border-radius: 5px;
     border: none;
+    width: 18%;
     cursor: pointer;
     font-size: 15px;
  } 
 
 .stp2-prev{
-    padding: 10px;
+    padding: 13px;
     background-color: #FFDE12;
     outline: none;
+    width: 18%;
     border-radius: 5px;
     border: none;
     cursor: pointer;

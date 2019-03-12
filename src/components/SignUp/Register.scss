@@ -67,12 +67,15 @@
 }
 
 .alert1{
-    background-color: lightblue;
+    background-color: rgb(253, 81, 51);
     position: absolute;
-    height: 20vh;
-    margin-top: 30vh;
-    margin-right: 20vw;
-    margin-left: 33vw;
+    height: 5vh;
+    margin-top: 5vh;
+    margin-right:0vw;
+    margin-left: 76.9vw;
+    color: white;
+    display: flex;
+    align-items: center;
     z-index: 2;
     border-radius: 5px;
     padding: 10px;

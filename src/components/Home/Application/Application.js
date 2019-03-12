@@ -4,7 +4,7 @@ import axios from 'axios';
 import Apply from './Apply/Apply';
 import {connect} from 'react-redux';
 import {getUser} from '../../../ducks/UsersRed';
-// import {Link} from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 class Application extends Component {
     constructor(){
@@ -24,7 +24,9 @@ class Application extends Component {
       }
 
   render() {
-  
+    
+
+    // console.log(this.props)
         let prerequisites = this.state.applyInfo.map((el, i) => {
           return(
               <Apply
@@ -35,26 +37,23 @@ class Application extends Component {
               />
           )
         })
-        return(
-          <div>
-            {prerequisites}
-          </div>
-        )
-        // return this.props.UsersRed.user.username ?(
-        //     <div>
-        //       {prerequisites}
-        //     </div>
-        //   ) : (
-        //     <div className='app-alert'>
-        //       <h2>You Need To Be Logged In To Volunteer</h2>
-        //       <Link to='/signup'>Sign up</Link>
-        //       <Link to='/register'>Regeister</Link>
-        //     </div>
-        //   );
+        return this.props.user.username ?(
+            <div>
+              {prerequisites}
+            </div>
+          ) : (
+            <div className='app-alert'>
+              <h1 className='app-h1'>You Need To Be Logged In To Volunteer</h1>
+              <div className='user-auth-links'>
+              <Link to='/signup' ><button className='links-auth'>Sign In</button></Link>
+              <Link to='/register'><button className='links-auth'>Regeister</button></Link>
+              </div>
+            </div>
+          );
     }
   }
 
-const mapStateToProps = state => state;
+const mapStateToProps = ({UsersRed}) => ({...UsersRed});
 
 
 export default connect(mapStateToProps, {getUser})(Application);

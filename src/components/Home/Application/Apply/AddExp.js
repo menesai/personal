@@ -1,8 +1,12 @@
 import React, { Component } from 'react'
-import './AddExp.scss'
+import './AddExp.scss';
+// import {connect} from 'react-redux';
+// import {getUser} from ''
 
 class AddExp extends Component {
-  
+    // componentDidMount(){
+    //     th
+    // }
 
   render() {
       console.log(this.props.org)

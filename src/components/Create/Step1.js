@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import './Step1.scss';
+import {connect} from 'react-redux';
+import {getUser} from '../../ducks/UsersRed';
+import {Link} from 'react-router-dom';
 
 export class Step1 extends Component {
     continue = () =>{
@@ -7,15 +10,18 @@ export class Step1 extends Component {
         this.props.nextStep();
     }
 
+    componentDidMount(){
+        this.props.getUser();
+      }
    
 
   render() {
       const {name,type, handleInputss, length, location, details } = this.props;
     //   const {add} = this.props;
-    return (
+    return this.props.user.username ?(
         <div className='outer-stp1'>
             <div className='step1'>
-                <label className='lbl-name'><strong>Name of The Project</strong></label>
+                <small className='lbl-name'>Name of The Project</small>
                 <input
                 className='ipt-name'
                 placeholder='Name'
@@ -24,7 +30,7 @@ export class Step1 extends Component {
                 name='name' 
                 />
 
-                <label className='lbl-type'> <strong>Type of Project</strong></label>
+                <small className='lbl-type'>Libary</small>
                 <select  placeholder='Type' className='ipt-type' name='type' value={type} onChange={handleInputss}>
                 <option value='Default'>Default</option>
                 <option value="Vue">Vue</option>
@@ -33,7 +39,7 @@ export class Step1 extends Component {
                 <option value="Other">Other</option>
                 </select>
                 
-                <label className='lbl-type'><strong>Length of The Project</strong></label>
+                <small className='lbl-type'>Length of The Project</small>
                 <input
                 className='ipt-length'
                 placeholder='Length'
@@ -41,7 +47,7 @@ export class Step1 extends Component {
                 onChange={handleInputss}
                 name='length'
                 />
-                <label className='lbl-type'><strong>Location</strong></label>
+                <small className='lbl-type'>Location</small>
                 <input
                 className='ipt-location'
                 placeholder='Location'
@@ -49,7 +55,7 @@ export class Step1 extends Component {
                 onChange={handleInputss}
                 name='location'
                 />
-                <label className='lbl-type'><strong>Project Details</strong></label>
+                <small className='lbl-type'>Project Details</small>
                 <textarea
                 className='ipt-details'
                 placeholder='Details'
@@ -61,11 +67,22 @@ export class Step1 extends Component {
 
                 <button className='stp1-next' onClick={this.continue}>Next</button>
                     </div>
-                {/* <button onClick={() => add(name,type,length, location, details)}>Add</button> */}
             </div>
+        </div>
+    ): (
+        <div>
+           <div className='app-alert'>
+              <h1 className='app-h1'>You Need To Be User To Create A Project</h1>
+              <div className='user-auth-links'>
+              <Link to='/signup' ><button className='links-auth'>Sign In</button></Link>
+              <Link to='/register'><button className='links-auth'>Regeister</button></Link>
+              </div>
+            </div> 
         </div>
     )
   }
 }
 
-export default Step1
+const mapStateToProps = ({UsersRed}) => ({...UsersRed});
+
+export default connect(mapStateToProps, {getUser})(Step1)

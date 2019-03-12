@@ -6,6 +6,7 @@ import {Switch, Route} from 'react-router-dom';
 import Register from './components//SignUp/Register';
 import Details from './components/Home/HomeComp/Details';
 import Application from './components/Home/Application/Application'
+import Test from './components/Test/Test';
 
 export default (
     <Switch>
@@ -15,5 +16,6 @@ export default (
         <Route path='/register' component={Register}/>
         <Route path='/projects/:id' component={Details}/>
         <Route path='/application/:id' component={Application}/>
+        <Route path= '/test' component={Test}/>
     </Switch>
 )

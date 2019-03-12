@@ -4,7 +4,7 @@ const {json} = require('body-parser');
 const massive = require('massive');
 const session = require('express-session');
 const {getInfo, create, deleteInfo, updateInfo, getProject} = require('./controller/controller');
-const {register, login, logout, getUser} = require('./controller/authController');
+const {register, login, logout, getUser, oneUser} = require('./controller/authController');
 const {usersOnly, adminsOnly} = require('./middleware/authMiddleware');
 const {applyCreate} = require('./controller/applyController');
 const path = require('path'); // Usually moved to the start of file
@@ -42,8 +42,9 @@ app.get('/api/project/:id', getProject);
 //auth controller
 app.post('/auth/register', register);
 app.post('/auth/login', login);
-app.get('/auth/logout', logout);
+app.post('/auth/logout', logout);
 app.get('/auth/user', getUser);
+app.get('/auth/profile/:id', oneUser);
 
 //apply Info
 app.post('/api/apply', applyCreate);
