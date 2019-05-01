@@ -47,7 +47,6 @@ export const getUser = () => {
 
 //this where they get exported 
 export default function UsersRed(state = intialState, action){
-    // console.log(action.payload)
     switch(action.type){
         case `${LOGIN}_FULFILLED`:
         return{
